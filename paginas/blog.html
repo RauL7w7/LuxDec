@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LuxDec Blog</title>
+    <link rel="stylesheet" href="../css/blog.css">
+    <link rel="stylesheet" href="../css/menu.css">
+    <link rel="stylesheet" href="../css/estilo.css">
+</head>
+
+<body>
+    <div class="menu-toggle" onclick="toggleSidebar()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <!-- Menú lateral -->
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <h2>LUXDEC</h2>
+            <button class="close-btn" onclick="toggleSidebar()">&times;</button>
+        </div>
+        <nav class="sidebar-nav">
+            <a href="../index.html" onclick="toggleSidebar()">
+                🏠 Inicio
+            </a>
+            <a href="nosotros.html" onclick="toggleSidebar()">
+                👥 Nosotros
+            </a>
+            <a href="servicios.html" onclick="toggleSidebar()">
+                🛠️ Servicios
+            </a>
+            <a href="blog.html" onclick="toggleSidebar()">
+                📝 Blog
+            </a>
+            <a href="../login.html" onclick="toggleSidebar()">
+                🔒 Cerrar Sesión
+            </a>
+        </nav>
+    </div>
+
+    <div class="sidebar-overlay" onclick="toggleSidebar()"></div>
+
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.querySelector('.sidebar');
+            const overlay = document.querySelector('.sidebar-overlay');
+            sidebar.classList.toggle('active');
+            overlay.classList.toggle('active');
+
+            document.body.style.overflow = sidebar.classList.contains('active') ? 'hidden' : '';
+        }
+
+        document.addEventListener('keydown', function (event) {
+            if (event.key === 'Escape') {
+                const sidebar = document.querySelector('.sidebar');
+                if (sidebar.classList.contains('active')) {
+                    toggleSidebar();
+                }
+            }
+        });
+    </script>
+    <!--header-->
+    <div class="iframe-container">
+        <iframe src="cabecera.html" frameborder="0"></iframe>
+    </div>
+    <!--main-->
+    <main>
+        <section class="introduccion">
+            <div class="contenedor-texto">
+                <p>
+                    Cuando María y Javier compraron su primer departamento en el centro de la ciudad, imaginaban tardes
+                    de café leyendo junto a la ventana y cenas con amigos. La realidad fue otra: se encontraron con un
+                    pasillo angosto, una cocina claustrofóbica y una luz tan tenue que siempre parecía anochecer. La
+                    emoción inicial se convirtió en frustración. Sentían que habían invertido en un espacio que nunca
+                    los haría felices. <br><br>
+                    Hoy, ese mismo departamento es un refugio lleno de luz y calma. ¿La clave? Un diseño estratégico que
+                    priorizó la amplitud, la iluminación y la multifuncionalidad. En este artículo, te mostramos el paso
+                    a paso de esta transformación y las 3 lecciones que puedes aplicar en tu hogar, sin importar su
+                    tamaño.
+                </p>
+            </div>
+        </section>
+
+        <section class="galeria">
+            <div class="contenedor">
+                <h2>RESULTADOS DE NUESTRO TRABAJO</h2>
+                <div class="galeria-fotos">
+                    <div class="comparacion">
+                        <div class="imagen-cont">
+                            <img src="../decoracion/antes1.jpeg" alt="img">
+                            <span class="etiqueta">ANTES</span>
+                        </div>
+                        <div class="imagen-cont">
+                            <img src="../decoracion/despues1.jpeg" alt="img">
+                            <span class="etiqueta">DESPUÉS</span>
+                        </div>
+                    </div>
+
+                    <div class="comparacion">
+                        <div class="imagen-cont">
+                            <img src="../decoracion/antes2.jpeg" alt="img">
+                            <span class="etiqueta">ANTES</span>
+                        </div>
+                        <div class="imagen-cont">
+                            <img src="../decoracion/despues2.jpeg" alt="img">
+                            <span class="etiqueta">DESPUÉS</span>
+                        </div>
+                    </div>
+
+                    <div class="comparacion">
+                        <div class="imagen-cont">
+                            <img src="../decoracion/antes3.jpeg" alt="img">
+                            <span class="etiqueta">ANTES</span>
+                        </div>
+                        <div class="imagen-cont">
+                            <img src="../decoracion/despues3.jpeg" alt="img">
+                            <span class="etiqueta">DESPUÉS</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="comentarios">
+            <div class="contenedor">
+                <h2>Comentarios</h2>
+                <div class="comentarios-lista" id="comentariosLista"></div>
+                <div class="formulario-comentario">
+                    <h3>Deja tu comentario</h3>
+                    <form id="formComentario">
+                        <div class="input-group">
+                            <label for="nombreComentario">Nombre:</label>
+                            <input type="text" id="nombreComentario" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="comentario">Comentario:</label>
+                            <textarea id="comentario" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-enviar">Enviar Comentario</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section class="ubicacion">
+            <div class="contenedor-ubicacion">
+                <div class="imagen-ubi">
+                    <img src="../decoracion/empresa.png" alt="img">
+                </div>
+                <div class="texto-ubi">
+                    <h3>Tu hogar ideal nos espera. Hablemos.</h3>
+                    <p>En LuxDec, creemos que el primer paso para un gran proyecto es una gran conversación. Queremos
+                        escuchar tus ideas, tus necesidades y tus sueños para tu espacio.</p>
+
+                    <div class="info-contacto">
+                        <div class="detalle">
+                            <strong>📍 Ven a conocernos:</strong>
+                            <p>Calle de la Decoración, 123, Local B<br>28001, Madrid</p>
+                        </div>
+
+                        <div class="detalle">
+                            <strong>📞 Llámanos:</strong>
+                            <p>+34 91 234 56 78</p>
+                        </div>
+
+                        <div class="detalle">
+                            <strong>⏰ Nuestro horario:</strong>
+                            <p>Lunes a Viernes: 9:30 - 14:00 / 16:00 - 19:00<br>
+                                Sábados: 10:00 - 14:00 (con cita previa)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!--footer-->
+    <iframe src="pie.html" width="100%" height="350px" frameborder="0"></iframe>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            cargarComentarios();
+            document.getElementById('formComentario').addEventListener('submit', function (e) {
+                e.preventDefault();
+                agregarComentario();
+            });
+        });
+
+        function cargarComentarios() {
+            let comentarios = JSON.parse(localStorage.getItem('comentariosBlog')) || [];
+            let comentariosLista = document.getElementById('comentariosLista');
+
+            comentariosLista.innerHTML = '';
+
+            if (comentarios.length === 0) {
+                comentariosLista.innerHTML = '<p class="sin-comentarios">Aún no hay comentarios. ¡Sé el primero en comentar!</p>';
+                return;
+            }
+
+            comentarios.forEach(comentario => {
+                let comentarioElement = document.createElement('div');
+                comentarioElement.className = 'comentario-item';
+                comentarioElement.innerHTML = `
+                    <div class="comentario-header">
+                        <strong>${comentario.nombre}</strong>
+                        <span class="fecha-comentario">${comentario.fecha}</span>
+                    </div>
+                    <div class="comentario-texto">${comentario.texto}</div>
+                `;
+                comentariosLista.appendChild(comentarioElement);
+            });
+        }
+
+        function agregarComentario() {
+            let nombre = document.getElementById('nombreComentario').value;
+            let texto = document.getElementById('comentario').value;
+
+            if (!nombre || !texto) {
+                alert('Por favor, completa todos los campos');
+                return;
+            }
+
+            let comentarios = JSON.parse(localStorage.getItem('comentariosBlog')) || [];
+
+            let nuevoComentario = {
+                nombre: nombre,
+                texto: texto,
+                fecha: new Date().toLocaleDateString('es-ES')
+            };
+
+            comentarios.push(nuevoComentario);
+            localStorage.setItem('comentariosBlog', JSON.stringify(comentarios));
+            document.getElementById('formComentario').reset();
+            cargarComentarios();
+            alert('Comentario agregado exitosamente');
+        }
+    </script>
+</body>
+
+</html>

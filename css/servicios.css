@@ -1,0 +1,357 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+.btn {
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1.15rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+}
+
+.btn-primary {
+    background: rgb(241, 241, 221);
+    color: rgb(165, 160, 155);
+}
+
+.btn-primary:hover {
+    background-color: rgb(56, 141, 141);
+    color: white;
+}
+
+.contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.servicios-titulo {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.servicios-titulo h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    background: linear-gradient(45deg, rgb(133, 126, 87), rgb(209, 150, 60));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 1rem;
+}
+
+.servicios-titulo p {
+    color: #666;
+    font-size: 1.25rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.intro-casas {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    flex-direction: row;
+    background-color: bisque;
+    margin-bottom: 2rem;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.contenedor-intro {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagen-casas {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagen-intro {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    padding: 5px;
+    border-radius: 15px;
+}
+
+.parrafo-intro {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 20px;
+}
+
+.parrafo-intro h2 {
+    text-align: center;
+    font-size: 30px;
+    color: #b8860b;
+    margin-bottom: 15px;
+}
+
+.parrafo-intro p {
+    font-size: 18px;
+    text-align: center;
+}
+
+.servicios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.servicios-card {
+    background: burlywood;
+    border: 1px solid #ddd;
+    border-radius: 16px;
+    padding: 2rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+}
+
+.servicios-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.servicios-card h3 {
+    color: #333;
+    font-size: 1.5rem;
+    margin-bottom: 0.7rem;
+}
+
+.servicios-card p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 1.5rem;
+}
+
+.modal-checkbox {
+    display: none;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 2000;
+}
+
+.modal-checkbox:checked+.modal-overlay {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-content {
+    background: #fff;
+    border-radius: 1rem;
+    padding: 2rem;
+    max-width: 600px;
+    width: 90%;
+    max-height: 80vh;
+    overflow: auto;
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+    position: relative;
+}
+
+.modal-checkbox:checked+.modal-overlay .modal-content {
+    transform: scale(1);
+}
+
+.close-modal {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #333;
+    z-index: 10;
+}
+
+.modal-header {
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.modal-header img {
+    border-radius: 8px;
+    max-width: 100%;
+    height: auto;
+}
+
+.modal-description {
+    color: #555;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+    font-size: 1.1rem;
+}
+
+.features-title {
+    color: #b8860b;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.feature-dot {
+    width: 8px;
+    height: 8px;
+    background: #b8860b;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.feature-text {
+    color: #555;
+    font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+    .intro-casas {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .contenedor-intro,
+    .parrafo-intro {
+        width: 100%;
+    }
+
+    .contenedor-intro {
+        height: 200px;
+    }
+
+    .parrafo-intro {
+        padding: 20px;
+    }
+
+    .servicios-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .servicios-titulo h2 {
+        font-size: 2rem;
+    }
+}
+
+/*MÓVILES */
+@media (max-width: 768px) {
+    .contenedor {
+        padding: 0 1rem;
+    }
+
+    .servicios-titulo h2 {
+        font-size: 2rem;
+    }
+
+    .servicios-titulo p {
+        font-size: 1rem;
+    }
+
+    .intro-casas {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .contenedor-intro,
+    .parrafo-intro {
+        width: 100%;
+    }
+
+    .contenedor-intro {
+        height: 150px;
+    }
+
+    .parrafo-intro {
+        padding: 20px;
+    }
+
+    .parrafo-intro h2 {
+        font-size: 24px;
+    }
+
+    .servicios-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .servicios-card {
+        padding: 1.5rem;
+    }
+
+    .modal-content {
+        width: 95%;
+        padding: 1rem;
+    }
+
+    .modal-header img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .servicios-titulo h2 {
+        font-size: 1.8rem;
+    }
+
+    .contenedor-intro {
+        height: 120px;
+    }
+
+    .imagen-casas {
+        padding: 2px;
+    }
+}

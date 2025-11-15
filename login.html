@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LuxDec</title>
+    <link rel="stylesheet" href="css/cabecera2.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <h2 class="logo">LUX DEC</h2>
+        <button class="btnLogin">Sesión</button>
+    </header>
+
+    <div class="content-login">
+        <span class="icon-close">
+            <i class="fas fa-times"></i>
+        </span>
+
+        <div class="form-login login">
+            <h2>Iniciar Sesión</h2>
+            <form action="#">
+                <div class="input-login">
+                    <span class="icon"><i class="fas fa-user"></i></span>
+                    <input type="text" id="usu" required>
+                    <label for="">Usuario:</label>
+                </div>
+                <div class="input-login">
+                    <span class="icon"><i class="fas fa-key"></i></span>
+                    <input type="password" id="pass" required>
+                    <label for="">Contraseña:</label>
+                </div>
+                <button class="btn" type="button" onclick="inicioSesion()">Ingresar</button>
+                <div class="login-register">
+                    <p>
+                        ¿No estás registrado?
+                        <a href="#" class="register-link">Registrarme</a>
+                    </p>
+                </div>
+            </form>
+        </div>
+
+        <div class="form-login register">
+            <h2>Registro</h2>
+            <form action="#" id="registerForm">
+                <div class="input-login">
+                    <span class="icon"><i class="fas fa-user"></i></span>
+                    <input type="text" id="fullName" required>
+                    <label for="">Nombre Completo:</label>
+                </div>
+                <div class="input-login">
+                    <span class="icon"><i class="fas fa-envelope"></i></span>
+                    <input type="email" id="email" placeholder=" ">
+                    <label for="">Correo Electrónico (opcional):</label>
+                </div>
+                <div class="input-login">
+                    <span class="icon"><i class="fas fa-user-circle"></i></span>
+                    <input type="text" id="newUser" required>
+                    <label for="">Usuario:</label>
+                </div>
+                <div class="input-login">
+                    <span class="icon"><i class="fas fa-lock"></i></span>
+                    <input type="password" id="newPassword" required>
+                    <label for="">Contraseña:</label>
+                </div>
+                <div class="input-login">
+                    <span class="icon"><i class="fas fa-lock"></i></span>
+                    <input type="password" id="confirmPassword" required>
+                    <label for="">Confirmar Contraseña:</label>
+                </div>
+                <button class="btn" type="button" onclick="registrarUsuario()">Registrar</button>
+                <div class="login-register">
+                    <p>
+                        ¿Volver?
+                        <a href="#" class="login-link">Iniciar Sesión</a>
+                    </p>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+    <script src="js/sesion.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>

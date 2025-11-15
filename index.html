@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LuxDec Inicio</title>
+    <link rel="stylesheet" href="css/estilo.css" type="text/css">
+    <link rel="stylesheet" href="css/menu.css">
+</head>
+
+<body>
+    <div class="menu-toggle" onclick="toggleSidebar()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <!-- Menú lateral -->
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <h2>LUXDEC</h2>
+            <button class="close-btn" onclick="toggleSidebar()">&times;</button>
+        </div>
+        <nav class="sidebar-nav">
+            <a href="index.html" onclick="toggleSidebar()">
+                🏠 Inicio
+            </a>
+            <a href="paginas/nosotros.html" onclick="toggleSidebar()">
+                👥 Nosotros
+            </a>
+            <a href="paginas/servicios.html" onclick="toggleSidebar()">
+                🛠️ Servicios
+            </a>
+            <a href="paginas/blog.html" onclick="toggleSidebar()">
+                📝 Blog
+            </a>
+            <a href="login.html" onclick="toggleSidebar()">
+                🔒 Cerrar Sesión
+            </a>
+        </nav>
+    </div>
+
+    <div class="sidebar-overlay" onclick="toggleSidebar()"></div>
+
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.querySelector('.sidebar');
+            const overlay = document.querySelector('.sidebar-overlay');
+            sidebar.classList.toggle('active');
+            overlay.classList.toggle('active');
+            document.body.style.overflow = sidebar.classList.contains('active') ? 'hidden' : '';
+        }
+
+        document.addEventListener('keydown', function (event) {
+            if (event.key === 'Escape') {
+                const sidebar = document.querySelector('.sidebar');
+                if (sidebar.classList.contains('active')) {
+                    toggleSidebar();
+                }
+            }
+        });
+    </script>
+    <!--cabecera-->
+    <div class="iframe-container">
+        <iframe src="paginas/cabecera.html" frameborder="0"></iframe>
+    </div>
+    <main>
+        <section class="contNuestroProducto">
+            <h2 class="titulo">Nuestro Producto</h2>
+            <div class="contenedor-nuestro-producto">
+                <img class="imagen-producto" src="imagenes/muebles superior.jpg" alt="Diseño de interiores LUXDEC">
+                <div class="contenido-texto">
+                    <h3><span>1</span>Diseño Personalizado</h3>
+                    <p>
+                        Creamos espacios únicos que reflejan tu personalidad y estilo de vida. Cada proyecto es una obra
+                        de arte funcional diseñada exclusivamente para ti.
+                    </p>
+                    <h3><span>2</span>Calidad Premium</h3>
+                    <p>
+                        Trabajamos con los mejores materiales y artesanos para garantizar durabilidad, elegancia y
+                        confort en cada uno de nuestros muebles y acabados.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="portafolio">
+            <div class="contenedor">
+                <h2 class="titulo">Nuestros Proyectos</h2>
+                <div class="galeria">
+                    <div class="imagenes">
+                        <img src="imagenes/muebles estandar.jpg" alt="img">
+                        <div class="hover-galeria">
+                            <img src="decoracion/7.jpg" alt="img">
+                        </div>
+                    </div>
+                    <div class="imagenes">
+                        <img src="decoracion/3.jpg" alt="img">
+                        <div class="hover-galeria">
+                            <img src="decoracion/4.jpg" alt="img">
+                        </div>
+                    </div>
+                    <div class="imagenes">
+                        <img src="decoracion/11.jpg" alt="img">
+                        <div class="hover-galeria">
+                            <img src="decoracion/6.jpg" alt="img">
+
+                        </div>
+                    </div>
+                    <div class="imagenes">
+                        <img src="decoracion/7.jpg" alt="img">
+                        <div class="hover-galeria">
+                            <img src="decoracion/9.jpg" alt="img">
+
+                        </div>
+                    </div>
+                    <div class="imagenes">
+                        <img src="decoracion/14.jpg" alt="img">
+                        <div class="hover-galeria">
+                            <img src="decoracion/10.jpg" alt="img">
+
+                        </div>
+                    </div>
+                    <div class="imagenes">
+                        <img src="decoracion/5.jpg" alt="img">
+                        <div class="hover-galeria">
+                            <img src="decoracion/1.jpg" alt="img">
+
+                        </div>
+                    </div>
+                    <div class="imagenes">
+                        <img src="decoracion/7.jpg" alt="img">
+                        <div class="hover-galeria">
+                            <img src="decoracion/16.jpg" alt="img">
+
+                        </div>
+                    </div>
+                    <div class="imagenes">
+                        <img src="decoracion/19.jpg" alt="img">
+                        <div class="hover-galeria">
+                            <img src="decoracion/20.jpg" alt="img">
+
+                        </div>
+                    </div>
+                    <div class="imagenes">
+                        <img src="decoracion/6.jpg" alt="img">
+                        <div class="hover-galeria">
+                            <img src="decoracion/18.jpg" alt="img">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="cliente-contenedor">
+            <h2 class="titulo">Testimonios</h2>
+            <div class="cards">
+                <div class="card">
+                    <img src="imagenes/imagen1.jpeg" alt="Cliente satisfecho">
+                    <div class="contenido-texto-card">
+                        <h4>María González</h4>
+                        <p>
+                            "LUXDEC transformó completamente mi departamento. El equipo entendió perfectamente mi visión
+                            y creó un espacio que superó todas mis expectativas."
+                        </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="imagenes/imagen2.jpeg" alt="Cliente satisfecho">
+                    <div class="contenido-texto-card">
+                        <h4>Carlos Rodríguez</h4>
+                        <p>
+                            "Profesionalismo y creatividad excepcionales. Nuestra casa ahora es el lugar soñado donde
+                            nuestra familia crea recuerdos inolvidables."
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="servicios">
+            <div class="contenedor">
+                <h2 class="titulo">Nuestros servicios</h2>
+                <div class="servicio-cont">
+                    <div class="servicio-int">
+                        <img src="decoracion/8.jpg" alt="img">
+                        <h3>Consultoría de Diseño</h3>
+                        <p>Asesoramiento experto para optimizar tus espacios y crear ambientes que se adapten a tu
+                            estilo de vida.</p>
+                    </div>
+                    <div class="servicio-int">
+                        <img src="decoracion/17.jpg" alt="img">
+                        <h3>Ejecución Integral</h3>
+                        <p>Gestión completa de tu proyecto desde el diseño conceptual hasta la entrega final llave en
+                            mano.</p>
+                    </div>
+                    <div class="servicio-int">
+                        <img src="decoracion/10.jpg" alt="img">
+                        <h3>Muebles a Medida</h3>
+                        <p>Diseño y fabricación de muebles exclusivos que maximizan el espacio y reflejan tu
+                            personalidad.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!--footer-->
+    <iframe src="paginas/pie.html" width="100%" height="350px" frameborder="0"></iframe>
+</body>
+
+</html>

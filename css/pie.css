@@ -1,0 +1,38 @@
+footer {
+    background-color: rgb(231, 218, 202);
+    padding: 60px 0 40px 0;
+    margin: auto;
+    overflow: hidden;
+}
+
+.footer1 {
+    display: flex;
+    width: 90%;
+    justify-content: space-evenly;
+    margin: auto;
+    padding-bottom: 50px;
+    border-bottom: 2px solid goldenrod;
+}
+
+.cont-footer {
+    text-align: center;
+}
+
+.cont-footer h4 {
+    border-bottom: 3px dotted goldenrod;
+    margin: 20px 0 10px 0;
+    font-size: 20px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+
+.cont-footer p {
+    color: black;
+}
+
+.Titulo-final {
+    text-align: center;
+    color: black;
+    margin: 20px 0 10px 0;
+    font-size: 25px;
+}

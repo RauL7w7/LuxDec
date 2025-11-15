@@ -1,0 +1,214 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.btn {
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1.15rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-primary {
+    background: rgb(241, 241, 221);
+    color: rgb(165, 160, 155);
+}
+
+.btn-primary:hover {
+    background-color: rgb(56, 141, 141);
+}
+
+.container {
+    max-width: 1200;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.nosotros {
+    padding: 3rem 0;
+}
+
+.nosotros-title {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.nosotros-title h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    font-family: 'tahoma';
+    background: linear-gradient(45deg, rgb(133, 126, 87), rgb(209, 150, 60));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 1rem;
+}
+
+.nosotros-title p {
+    color: goldenrod;
+    font-size: 1.25rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.nosotros-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem
+}
+
+.nosotros-card {
+    background: burlywood;
+    backdrop-filter: blur(10px);
+    border: dotted 1px black;
+    border-radius: 1rem;
+    padding: 2rem;
+    transition: box-shadow 0.3s;
+}
+
+.nosotros-card:hover {
+    box-shadow: 0 10px 25px rgba(189, 14, 14, 0.712);
+}
+
+.nosotros-icon {
+    width: 50px;
+    height: 50px;
+    background: rgba(189, 14, 14);
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.nosotros-card h3 {
+    color: black;
+    font-size: 1.5rem;
+    margin-bottom: 0.7rem;
+}
+
+.nosotros-card p {
+    font-size: 15px;
+    color: black;
+    margin-bottom: 1.5rem;
+    font-family: arial;
+}
+
+/*modal(desplegable)*/
+.modal-checkbox {
+    display: none;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
+    z-index: 2000;
+}
+
+.modal-checkbox:checked+.modal-overlay {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-content {
+    background: rgb(216, 175, 114);
+    border: 2px dotted rgb(0, 0, 0);
+    border-radius: 1rem;
+    padding: 2rem;
+    max-width: 600px;
+    width: 90%;
+    max-height: 80vh;
+    overflow: auto;
+    transform: scale(0.5);
+    transition: transform(0.3s);
+}
+
+.modal-checkbox:checked+.modal-overlay .modal-content {
+    transform: scale(1);
+}
+
+.close-modal {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: bisque;
+}
+
+.modal-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.modal-header h3 {
+    color: bisque;
+    font-size: 1.5rem;
+}
+
+.modal-price {
+    color: beige;
+    font-size: 1.2rem;
+    font-weight: 600;
+    font-family: georgia;
+}
+
+.modal-description {
+    color: blanchedalmond;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+}
+
+.features-title {
+    color: bisque;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.feature-dot {
+    width: 8px;
+    height: 8px;
+    background: rgb(204, 129, 16);
+    border-radius: 50%;
+}
+
+.feature-text {
+    color: antiquewhite;
+    font-size: 0.8rem;
+    font-family: georgia;
+}

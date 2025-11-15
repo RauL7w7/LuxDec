@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Lateral</title>
+    <link rel="stylesheet" href="../css/menu.css">
+</head>
+
+<body>
+    <div class="menu-toggle" onclick="toggleSidebar()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <!-- Menú lateral -->
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <h2>LUXDEC</h2>
+            <button class="close-btn" onclick="toggleSidebar()">&times;</button>
+        </div>
+        <nav class="sidebar-nav">
+            <a href="../index.html" onclick="toggleSidebar()">
+                🏠 Inicio
+            </a>
+            <a href="pages/nosotros.html" onclick="toggleSidebar()">
+                👥 Nosotros
+            </a>
+            <a href="pages/servicios.html" onclick="toggleSidebar()">
+                🛠️ Servicios
+            </a>
+            <a href="pages/blog.html" onclick="toggleSidebar()">
+                📝 Blog
+            </a>
+            <a href="login.html" onclick="toggleSidebar()">
+                🔒 Cerrar Sesión
+            </a>
+        </nav>
+    </div>
+
+    <div class="sidebar-overlay" onclick="toggleSidebar()"></div>
+
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.querySelector('.sidebar');
+            const overlay = document.querySelector('.sidebar-overlay');
+            sidebar.classList.toggle('active');
+            overlay.classList.toggle('active');
+            document.body.style.overflow = sidebar.classList.contains('active') ? 'hidden' : '';
+        }
+
+        document.addEventListener('keydown', function (event) {
+            if (event.key === 'Escape') {
+                const sidebar = document.querySelector('.sidebar');
+                if (sidebar.classList.contains('active')) {
+                    toggleSidebar();
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

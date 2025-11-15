@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LuxDec Nosotros</title>
+    <link rel="stylesheet" href="../css/nosotros.css">
+    <link rel="stylesheet" href="../css/menu.css">
+    <link rel="stylesheet" href="../css/estilo.css">
+</head>
+
+<body>
+    <div class="menu-toggle" onclick="toggleSidebar()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <!-- Menú lateral -->
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <h2>LUXDEC</h2>
+            <button class="close-btn" onclick="toggleSidebar()">&times;</button>
+        </div>
+        <nav class="sidebar-nav">
+            <a href="../index.html" onclick="toggleSidebar()">
+                🏠 Inicio
+            </a>
+            <a href="nosotros.html" onclick="toggleSidebar()">
+                👥 Nosotros
+            </a>
+            <a href="servicios.html" onclick="toggleSidebar()">
+                🛠️ Servicios
+            </a>
+            <a href="blog.html" onclick="toggleSidebar()">
+                📝 Blog
+            </a>
+            <a href="../login.html" onclick="toggleSidebar()">
+                🔒 Cerrar Sesión
+            </a>
+        </nav>
+    </div>
+
+    <div class="sidebar-overlay" onclick="toggleSidebar()"></div>
+
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.querySelector('.sidebar');
+            const overlay = document.querySelector('.sidebar-overlay');
+            sidebar.classList.toggle('active');
+            overlay.classList.toggle('active');
+            document.body.style.overflow = sidebar.classList.contains('active') ? 'hidden' : '';
+        }
+
+        document.addEventListener('keydown', function (event) {
+            if (event.key === 'Escape') {
+                const sidebar = document.querySelector('.sidebar');
+                if (sidebar.classList.contains('active')) {
+                    toggleSidebar();
+                }
+            }
+        });
+    </script>
+    <!--header-->
+    <div class="iframe-container">
+        <iframe src="cabecera.html" frameborder="0"></iframe>
+    </div>
+    <!--main-->
+    <main>
+        <!-- Sección nosotros-->
+        <section class="nosotros">
+            <div class="container">
+                <div class="nosotros-title">
+                    <h2>Sobre LUXDEC</h2>
+                    <p>Transformando espacios, creando experiencias</p>
+                </div>
+                <div class="nosotros-grid">
+                    <!-- Historia -->
+                    <div class="nosotros-card">
+                        <div class="nosotros-icon">🏛️</div>
+                        <h3>Nuestra Historia</h3>
+                        <p>Desde 1990, LUXDEC ha sido líder en diseño de interiores, creando espacios que inspiran y
+                            transforman vidas...</p>
+                        <label for="modal-historia" class="btn btn-primary"
+                            style="text-align: center; cursor: pointer;">Conoce Nuestra Historia</label>
+                    </div>
+
+                    <!-- Modal Historia -->
+                    <input type="checkbox" id="modal-historia" class="modal-checkbox">
+                    <div class="modal-overlay">
+                        <div class="modal-content">
+                            <label for="modal-historia" class="close-modal">&times;</label>
+                            <div class="modal-header">
+                                <div class="nosotros-icon">🏛️</div>
+                                <div>
+                                    <h3>Nuestra Trayectoria</h3>
+                                    <div class="modal-price">Desde 1990</div>
+                                </div>
+                            </div>
+                            <p class="modal-description">
+                                Fundada en 1990 por los arquitectos Elena Martínez y Roberto Sánchez, LUXDEC nació con
+                                la visión de transformar espacios ordinarios en entornos extraordinarios. Comenzamos
+                                como un pequeño estudio con 2 apasionados diseñadores y hoy somos un equipo de más de 50
+                                profesionales especializados.
+                            </p>
+                            <h4 class="features-title">Nuestra Evolución</h4>
+                            <div class="features-grid">
+                                <div class="feature-item">
+                                    <div class="feature-dot"></div>
+                                    <span class="feature-text">1990 - Fundación del estudio</span>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="feature-dot"></div>
+                                    <span class="feature-text">2000 - Expansión nacional</span>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="feature-dot"></div>
+                                    <span class="feature-text">2010 - Especialización en sustentabilidad</span>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="feature-dot"></div>
+                                    <span class="feature-text">2020 - Líderes en diseño inteligente</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Filosofía -->
+                    <div class="nosotros-card">
+                        <div class="nosotros-icon">💎</div>
+                        <h3>Nuestra Filosofía</h3>
+                        <p>Creemos que cada espacio cuenta una historia y debe reflejar la esencia de quienes lo
+                            habitan...</p>
+                        <label for="modal-filosofia" class="btn btn-primary"
+                            style="text-align: center; cursor: pointer;">Nuestra Visión</label>
+                    </div>
+
+                    <!-- Modal Filosofía -->
+                    <input type="checkbox" id="modal-filosofia" class="modal-checkbox">
+                    <div class="modal-overlay">
+                        <div class="modal-content">
+                            <label for="modal-filosofia" class="close-modal">&times;</label>
+                            <div class="modal-header">
+                                <div class="nosotros-icon">💎</div>
+                                <div>
+                                    <h3>Nuestra Filosofía</h3>
+                                    <div class="modal-price">Excelencia y Pasión</div>
+                                </div>
+                            </div>
+                            <p class="modal-description">
+                                En LUXDEC, no solo diseñamos espacios; creamos experiencias de vida. Nuestra filosofía
+                                se basa en tres pilares fundamentales: funcionalidad, estética y sostenibilidad. Creemos
+                                que un espacio bien diseñado mejora la calidad de vida y fortalece las conexiones
+                                humanas.
+                            </p>
+                            <h4 class="features-title">Nuestros Valores</h4>
+                            <div class="features-grid">
+                                <div class="feature-item">
+                                    <div class="feature-dot"></div>
+                                    <span class="feature-text">Innovación constante</span>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="feature-dot"></div>
+                                    <span class="feature-text">Sostenibilidad ambiental</span>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="feature-dot"></div>
+                                    <span class="feature-text">Personalización total</span>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="feature-dot"></div>
+                                    <span class="feature-text">Calidad artesanal</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Equipo -->
+                    <div class="nosotros-card">
+                        <div class="nosotros-icon">👨‍💼</div>
+                        <h3>Nuestro Equipo</h3>
+                        <p>Contamos con diseñadores, arquitectos y artesanos apasionados por crear espacios únicos...
+                        </p>
+                        <label for="modal-equipo" class="btn btn-primary"
+                            style="text-align: center; cursor: pointer;">Conoce al Equipo</label>
+                    </div>
+
+                    <!-- Modal Equipo -->
+                    <input type="checkbox" id="modal-equipo" class="modal-checkbox">
+                    <div class="modal-overlay">
+                        <div class="modal-content">
+                            <label for="modal-equipo" class="close-modal">&times;</label>
+                            <div class="modal-header">
+                                <div class="nosotros-icon">👨‍💼</div>
+                                <div>
+                                    <h3>Nuestro Equipo</h3>
+                                    <div class="modal-price">Expertos en Diseño</div>
+                                </div>
+                            </div>
+                            <p class="modal-description">
+                                Nuestro equipo multidisciplinario está formado por arquitectos, diseñadores de
+                                interiores, ingenieros y artesanos que comparten una pasión: transformar espacios en
+                                experiencias memorables. Cada miembro aporta una perspectiva única, enriqueciendo cada
+                                proyecto con creatividad y expertise.
+                            </p>
+                            <h4 class="features-title">Especialidades del Equipo</h4>
+                            <div class="features-grid">
+                                <div class="feature-item">
+                                    <div class="feature-dot"></div>
+                                    <span class="feature-text">Diseño residencial</span>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="feature-dot"></div>
+                                    <span class="feature-text">Espacios comerciales</span>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="feature-dot"></div>
+                                    <span class="feature-text">Diseño sustentable</span>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="feature-dot"></div>
+                                    <span class="feature-text">Iluminación especializada</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!--footer-->
+    <iframe src="pie.html" width="100%" height="350px" frameborder="0"></iframe>
+</body>
+
+</html>

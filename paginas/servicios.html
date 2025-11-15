@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LuxDec Servicios</title>
+    <link rel="stylesheet" href="../css/servicios.css">
+    <link rel="stylesheet" href="../css/menu.css">
+    <link rel="stylesheet" href="../css/estilo.css">
+</head>
+
+<body>
+    <div class="menu-toggle" onclick="toggleSidebar()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <!-- Menú lateral -->
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <h2>LUXDEC</h2>
+            <button class="close-btn" onclick="toggleSidebar()">&times;</button>
+        </div>
+        <nav class="sidebar-nav">
+            <a href="../index.html" onclick="toggleSidebar()">
+                🏠 Inicio
+            </a>
+            <a href="nosotros.html" onclick="toggleSidebar()">
+                👥 Nosotros
+            </a>
+            <a href="servicios.html" onclick="toggleSidebar()">
+                🛠️ Servicios
+            </a>
+            <a href="blog.html" onclick="toggleSidebar()">
+                📝 Blog
+            </a>
+            <a href="../login.html" onclick="toggleSidebar()">
+                🔒 Cerrar Sesión
+            </a>
+        </nav>
+    </div>
+
+    <div class="sidebar-overlay" onclick="toggleSidebar()"></div>
+
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.querySelector('.sidebar');
+            const overlay = document.querySelector('.sidebar-overlay');
+            sidebar.classList.toggle('active');
+            overlay.classList.toggle('active');
+            document.body.style.overflow = sidebar.classList.contains('active') ? 'hidden' : '';
+        }
+
+        document.addEventListener('keydown', function (event) {
+            if (event.key === 'Escape') {
+                const sidebar = document.querySelector('.sidebar');
+                if (sidebar.classList.contains('active')) {
+                    toggleSidebar();
+                }
+            }
+        });
+    </script>
+    <!--header-->
+    <div class="iframe-container">
+        <iframe src="cabecera.html" frameborder="0"></iframe>
+    </div>
+    <!--main-->
+    <main>
+        <section class="servicios">
+            <div class="contenedor">
+                <div class="servicios-titulo">
+                    <h2>SERVICIOS</h2>
+                    <p>Nuestra empresa de decoración de interiores ofrece soluciones integrales y personalizadas para
+                        transformar tus espacios, adaptándonos a tus necesidades y presupuesto. Contamos con tres
+                        paquetes principales: un servicio Estándar de diseño y asesoría para quienes prefieren
+                        implementar las ideas por su cuenta; un paquete Superior que incluye la gestión de compras y
+                        coordinación con proveedores; y un servicio Deluxe ‘llave en mano’, donde nos encargamos de
+                        absolutamente todo, desde el diseño hasta la ejecución final, incluyendo la coordinación de
+                        oficios y el montaje. Especialistas en optimizar espacios, tanto en viviendas como en
+                        departamentos, creamos ambientes funcionales, estéticos y alineados con tu estilo de vida.</p>
+                </div>
+                <div class="intro-casas">
+                    <div class="contenedor-intro">
+                        <div class="imagen-casas">
+                            <img src="../decoracion/13.jpg" alt="casas" class="imagen-intro">
+                        </div>
+                        <div class="imagen-casas">
+                            <img src="../decoracion/14.jpg" alt="casas" class="imagen-intro">
+                        </div>
+                        <div class="imagen-casas">
+                            <img src="../decoracion/13.jpg" alt="casas" class="imagen-intro">
+                        </div>
+                    </div>
+                    <div class="parrafo-intro">
+                        <h2>CASAS</h2>
+                        <p>Creamos hogares con alma. Diseñamos ambientes cálidos y personalizados, donde cada espacio
+                            cuenta tu historia con funcionalidad y estilo atemporal</p>
+                    </div>
+                </div>
+                <br>
+                <div class="servicios-grid">
+                    <div class="servicios-card">
+                        <h3>ESTANDAR</h3>
+                        <p>Desarrollamos un plan de diseño personalizado con ideas conceptuales, paleta de colores y
+                            selección de materiales para que transformes tu hogar a tu ritmo.</p>
+                        <label for="modal-estandar" class="btn btn-primary">Más Información del servicio</label>
+                    </div>
+                    <div class="servicios-card">
+                        <h3>SUPERIOR</h3>
+                        <p>Creamos un proyecto ejecutivo con renderizados 3D, gestionamos la adquisición de muebles y
+                            coordinamos la logística para garantizar un resultado armonioso.</p>
+                        <label for="modal-superior" class="btn btn-primary">Más Información del servicio</label>
+                    </div>
+                    <div class="servicios-card">
+                        <h3>DELUX</h3>
+                        <p>Servicio llave en mano: diseñamos, ejecutamos obras menores, coordinamos oficios y realizamos
+                            el montaje final para entregarte tu hogar listo para vivir.</p>
+                        <label for="modal-delux" class="btn btn-primary">Más Información del servicio</label>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="servicios">
+            <div class="contenedor">
+                <div class="intro-casas">
+                    <div class="contenedor-intro">
+                        <div class="imagen-casas">
+                            <img src="../decoracion/8.jpg" alt="casas" class="imagen-intro">
+                        </div>
+                        <div class="imagen-casas">
+                            <img src="../decoracion/9.jpg" alt="casas" class="imagen-intro">
+                        </div>
+                        <div class="imagen-casas">
+                            <img src="../decoracion/7.jpg" alt="casas" class="imagen-intro">
+                        </div>
+                    </div>
+                    <div class="parrafo-intro">
+                        <h2>DEPARTAMENTOS</h2>
+                        <p>Transformamos departamentos con ingenio. Optimizamos metros cuadrados con soluciones
+                            inteligentes, creando espacios modernos, luminosos y perfectos para la vida urbana</p>
+                    </div>
+                </div>
+                <div class="servicios-grid">
+                    <div class="servicios-card">
+                        <h3>ESTANDAR</h3>
+                        <p> Ideas innovadoras para maximizar espacios, con soluciones de almacenamiento y distribución
+                            que aprovechan cada centímetro de tu departamento.</p>
+                        <label for="modal-estandar-deptos" class="btn btn-primary">Más Información del servicio</label>
+                    </div>
+                    <div class="servicios-card">
+                        <h3>SUPERIOR</h3>
+                        <p> Diseño especializado con gestión de compras de muebles multifuncionales a medida y asesoría
+                            en integración de iluminación y espejos.</p>
+                        <label for="modal-superior-deptos" class="btn btn-primary">Más Información del servicio</label>
+                    </div>
+                    <div class="servicios-card">
+                        <h3>DELUX</h3>
+                        <p>Transformación integral con modificaciones inteligentes, instalación de mobiliario optimizado
+                            y decoración completa para tu vida urbana.</p>
+                        <label for="modal-delux-deptos" class="btn btn-primary">Más Información del servicio</label>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <input type="checkbox" id="modal-estandar" class="modal-checkbox">
+    <div class="modal-overlay">
+        <div class="modal-content">
+            <label for="modal-estandar" class="close-modal">&times;</label>
+            <div class="modal-header">
+                <img src="../decoracion/3.jpg" width="350px" height="400px">
+            </div>
+            <p class="modal-description">
+                Nuestro servicio estándar para casas incluye consultoría inicial, planos de distribución y asesoría
+                básica para optimizar tu bolsillo lo mas posible y que este a gusto con el resultado.
+            </p>
+            <h4 class="features-title">Servicios incluidos</h4>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-dot"></div>
+                    <span class="feature-text">consultoria inicial y diagnostico</span>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-dot"></div>
+                    <span class="feature-text">Plan de diceño conseptual</span>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-dot"></div>
+                    <span class="feature-text">planos de distribucion</span>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-dot"></div>
+                    <span class="feature-text">Dossier de decoracion completa</span>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-dot"></div>
+                    <span class="feature-text">Asesoria por email</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <input type="checkbox" id="modal-superior" class="modal-checkbox">
+    <div class="modal-overlay">
+        <div class="modal-content">
+            <label for="modal-superior" class="close-modal">&times;</label>
+            <div class="modal-header">
+                <img src="../decoracion/17.jpg" alt="img-caja1" width="350px" height="400px">
+            </div>
+            <p class="modal-description">
+                Transformamos departamentos con ingenio. Optimizamos metros cuadrados con soluciones inteligentes,
+                creando espacios modernos, luminosos y perfectos para la vida urbana.
+            </p>
+            <h4 class="features-title">Servicios incluidos</h4>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-dot"></div>
+                    <span class="feature-text">Renderizado en 3D</span>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-dot"></div>
+                    <span class="feature-text">Gestion de compras y pedidos</span>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-dot"></div>
+                    <span class="feature-text">Asedorsmiento en obra</span>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-dot"></div>
+                    <span class="feature-text">Soporte continuo</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <input type="checkbox" id="modal-delux" class="modal-checkbox">
+    <div class="modal-overlay">
+        <div class="modal-content">
+            <label for="modal-delux" class="close-modal">&times;</label>
+            <div class="modal-header">
+                <div class="nosotros-icon">
+                    <img src="../decoracion/5.jpg" alt="img-caja1" width="350px" height="400px">
+                </div>
+            </div>
+            <p class="modal-description">
+                Nuestro servicio premium incluye consultoría personalizada, desarrollo a medida y soporte prioritario.
+                Trabajamos contigo para crear soluciones únicas que se adapten perfectamente a tu negocio.
+            </p>
+            <h4 class="features-title">Servicios incluidos</h4>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-dot"></div>
+                    <span class="feature-text">Direccion de proyecto integral</span>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-dot"></div>
+                    <span class="feature-text">Coordinacion y supervicion de obra</span>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-dot"></div>
+                    <span class="feature-text">Montaje y stagin final</span>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-dot"></div>
+                    <span class="feature-text">entrega "llave en mano"</span>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-dot"></div>
+                    <span class="feature-text">soporte premiun</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <input type="checkbox" id="modal-estandar-deptos" class="modal-checkbox">
+    <div class="modal-overlay">
+        <div class="modal-content">
+            <label for="modal-estandar-deptos" class="close-modal">&times;</label>
+            <div class="modal-header">
+                <div class="nosotros-icon">
+                    <img src="../decoracion/10.jpg" alt="img-caja1" width="350px" height="400px">
+                </div>
+            </div>
+            <p class="modal-description">
+                Nuestro servicio estándar para departamentos incluye consultoría inicial, planos de distribución y
+                asesoría básica para optimizar tus espacios.
+            </p>
+            <h4 class="features-title">Servicios incluidos</h4>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-dot"></div>
+                    <span class="feature-text">consultoria inicial y diagnostico</span>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-dot"></div>
+                    <span class="feature-text">Plan de diceño conseptual</span>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-dot"></div>
+                    <span class="feature-text">planos de distribucion</span>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-dot"></div>
+                    <span class="feature-text">Dossier de decoracion completa</span>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-dot"></div>
+                    <span class="feature-text">Asesoria por email</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <input type="checkbox" id="modal-superior-deptos" class="modal-checkbox">
+    <div class="modal-overlay">
+        <div class="modal-content">
+            <label for="modal-superior-deptos" class="close-modal">&times;</label>
+            <div class="modal-header">
+                <div class="nosotros-icon">
+                    <img src="../decoracion/19.jpg" alt="img-caja1" width="350px" height="400px">
+                </div>
+            </div>
+            <p class="modal-description">
+                Nuestro servicio superior para departamentos incluye renderizados en 3D, gestión de compras y
+                acompañamiento durante la ejecución del proyecto.
+            </p>
+            <h4 class="features-title">Servicios incluidos</h4>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-dot"></div>
+                    <span class="feature-text">Renderizado en 3D</span>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-dot"></div>
+                    <span class="feature-text">Gestion de compras y pedidos</span>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-dot"></div>
+                    <span class="feature-text">Asedorsmiento en obra</span>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-dot"></div>
+                    <span class="feature-text">Soporte continuo</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <input type="checkbox" id="modal-delux-deptos" class="modal-checkbox">
+    <div class="modal-overlay">
+        <div class="modal-content">
+            <label for="modal-delux-deptos" class="close-modal">&times;</label>
+            <div class="modal-header">
+                <div class="nosotros-icon">
+                    <img src="../decoracion/19.jpg" alt="img-caja1" width="350px" height="400px">
+                </div>
+            </div>
+            <p class="modal-description">
+                Nuestro servicio Delux para departamentos ofrece una experiencia completa de diseño interior con
+                dirección de proyecto integral y entrega llave en mano.
+            </p>
+            <h4 class="features-title">Servicios incluidos</h4>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-dot"></div>
+                    <span class="feature-text">Direccion de proyecto integral</span>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-dot"></div>
+                    <span class="feature-text">Coordinacion y supervicion de obra</span>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-dot"></div>
+                    <span class="feature-text">Montaje y stagin final</span>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-dot"></div>
+                    <span class="feature-text">entrega "llave en mano"</span>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-dot"></div>
+                    <span class="feature-text">soporte premiun</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <iframe src="pie.html" width="100%" height="350px" frameborder="0"></iframe>
+</body>
+
+</html>
