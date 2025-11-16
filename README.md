@@ -9,7 +9,7 @@
 - **LocalStorage**
 
 ## 🌐 Enlace de la pagina
-🚧 **Próximamente** - Sitio en desarrollo
+- https://raul7w7.github.io/LuxDec/
 
 ---
 
